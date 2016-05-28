@@ -2,6 +2,7 @@ package com.wial;
 
 import demkin.sports.api.AuthData;
 import demkin.sports.api.Authenticator;
+import demkin.sports.api.ClubPage;
 import demkin.sports.api.MessageAPI;
 
 /**
@@ -14,12 +15,12 @@ public class Launcher {
 
     public static void main(String[] args) throws Exception {
 
-        Authenticator authenticator = new Authenticator("dubm.test@yandex.ru","Sobaka1");
-        AuthData authData = authenticator.auth();
+       // Authenticator authenticator = new Authenticator("dubm.test@yandex.ru","Sobaka1");
+       // AuthData authData = authenticator.auth();
 
-        MessageAPI messageAPI = new MessageAPI(authData);
+       // MessageAPI messageAPI = new MessageAPI(authData);
 
-        messageAPI.addMessage("1040481645","что-то с кодировкой :(");
+       // messageAPI.addMessage("1040481645","что-то с кодировкой :(");
 
 //        Comments comments = messageAPI.findAllMessage("1040285139");
 //
@@ -28,6 +29,12 @@ public class Launcher {
 //
 //            String id =  comment.getUser().getId();
 //        });
+
+        ClubPage clubPage = new ClubPage();
+
+        clubPage.findAllNews("real");
+
+
 
     }
 

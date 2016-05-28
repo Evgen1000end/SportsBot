@@ -12,12 +12,10 @@ public class SportsHttp {
 
     protected AuthData authData;
 
-    private final static String DEFAULT_HOST = "http://www.sports.ru";
-
     protected HttpJerseyHelper invoker;
 
     public SportsHttp() {
-        invoker = HttpJerseyHelper.defaultHttp(DEFAULT_HOST);
+        invoker = HttpJerseyHelper.defaultHttp(Constants.DEFAULT_HOST);
     }
 
     public HttpJerseyHelper getInvoker() {
@@ -36,16 +34,4 @@ public class SportsHttp {
         this();
         this.authData = authData;
     }
-
-//    public MultivaluedMap<String, Object> getDefaultCookies(){
-//        if (authData==null)
-//            throw new RuntimeException("Auth object not init!");
-//
-//        MultivaluedMap<String, Object> map = new MultivaluedHashMap<>();
-//
-//
-//        map.put("Cookie", authData.getAuthCookie());
-//
-//    }
-
 }

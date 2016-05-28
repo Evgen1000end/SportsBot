@@ -1,0 +1,25 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    repositories {
+       mavenCentral()
+    }
+
+    sourceCompatibility = 1.8
+	
+	task wrapper(type: Wrapper) {
+		gradleVersion = '2.9'
+		distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+	}
+
+    dependencies {
+        testCompile 'junit:junit:4.12'
+    }
+
+    version = '1.0'
+
+//    jar {
+//        manifest.attributes provider: 'gradle'
+//    }
+}

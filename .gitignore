@@ -8,5 +8,21 @@
 *.war
 *.ear
 
+# Java class files
+*.class
+
+
+#Gradle
+.gradletasknamecache
+.gradle/
+build/
+bin/
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*

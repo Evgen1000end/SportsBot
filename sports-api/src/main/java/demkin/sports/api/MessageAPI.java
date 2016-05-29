@@ -26,6 +26,8 @@ public class MessageAPI extends SportsHttp {
         super(authData);
     }
 
+
+    //
     public void addMessage(String newsId,String message){
 
         Map<String, String> map = new HashMap<>();
